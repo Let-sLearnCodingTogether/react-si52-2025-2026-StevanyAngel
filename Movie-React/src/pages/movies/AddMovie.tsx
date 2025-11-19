@@ -4,12 +4,11 @@ import Button from "react-bootstrap/Button";
 function AddMovie() {
     return <div>
         <div>
-        <h2>Add Movie Page</h2>
-        <NavLink to="/">Movie Page</NavLink>
+            <h2>Add Movie</h2>
+            <Button variant="btn btn-primary"> List Movie </Button>
         </div>
-        <Button variant="btn btn-primary"> List Movie </Button>
-    </div>
-    
+            <NavLink to="/">Movie Page</NavLink>
+        </div>
 }
 
 export default AddMovie;
