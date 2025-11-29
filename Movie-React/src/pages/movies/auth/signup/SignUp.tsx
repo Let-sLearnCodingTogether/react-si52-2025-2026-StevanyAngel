@@ -44,7 +44,7 @@ function SignUp() {
                     <Form.Control 
                     value={form.username}
                     onChange={onHandleChange}
-                    name="Username"
+                    name="username"
                     type="text"
                     placeholder="Enter your username"></Form.Control>
                 </Form.Group>
@@ -54,7 +54,7 @@ function SignUp() {
                     <Form.Control 
                     value={form.email}
                     onChange={onHandleChange}
-                    name="Email"
+                    name="email"
                     type="text"
                     placeholder="Enter your email"></Form.Control>
                 </Form.Group>
@@ -64,7 +64,7 @@ function SignUp() {
                     <Form.Control 
                     value={form.password}
                     onChange={onHandleChange}
-                    name="Password"
+                    name="password"
                     type="text"
                     placeholder="Enter your password"></Form.Control>
                 </Form.Group>
