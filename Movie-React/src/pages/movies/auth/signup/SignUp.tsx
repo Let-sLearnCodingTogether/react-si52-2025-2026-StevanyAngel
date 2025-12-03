@@ -2,6 +2,7 @@ import { useState, type ChangeEvent, type FormEvent } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import ApiClient from "../../../../utils/ApiClient";
+import { NavLink } from "react-router";
 
 interface SignUpForm {
     username: string,
@@ -28,7 +29,7 @@ function SignUp() {
         event.preventDefault();
 
         try{
-            const response = await ApiClient.post("/", form);
+            const response = await ApiClient.post("/signup", form);
             console.log(response);
 
         } catch (error) {
@@ -37,9 +38,9 @@ function SignUp() {
     }
 
     return <div>
-        <h2>Sign Up Page</h2>
+        <h2>Sign Up</h2>
         <Form onSubmit={onSubmit}>
-            <Form.Group className="mb-3" controlId='Username'>
+            <Form.Group className="mb-3" controlId='formUsername'>
                 <Form.Label>Username</Form.Label>
                     <Form.Control 
                     value={form.username}
@@ -49,7 +50,7 @@ function SignUp() {
                     placeholder="Enter your username"></Form.Control>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId='Email'>
+                <Form.Group className="mb-3" controlId='formEmail'>
                     <Form.Label>Email</Form.Label>
                     <Form.Control 
                     value={form.email}
@@ -59,7 +60,7 @@ function SignUp() {
                     placeholder="Enter your email"></Form.Control>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId='Password'>
+                <Form.Group className="mb-3" controlId='formPassword'>
                     <Form.Label>Password</Form.Label>
                     <Form.Control 
                     value={form.password}
@@ -69,6 +70,7 @@ function SignUp() {
                     placeholder="Enter your password"></Form.Control>
                 </Form.Group>
                     <Button variant="primary" type="submit">Sign Up</Button>
+                    <NavLink to="/signin">Sign In</NavLink>
             </Form>
     </div>
 }
