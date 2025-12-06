@@ -40,7 +40,7 @@ function AddMovie() {
     return <div>
         <div>
             <h2>Add Movie</h2>
-            <NavLink to="/">Movie Page</NavLink>
+            <NavLink to="/movie">Movie Page</NavLink>
         </div>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId='formJudul'>
